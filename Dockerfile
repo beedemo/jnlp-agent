@@ -15,9 +15,9 @@ RUN curl --create-dirs -sSLo /usr/share/jenkins/slave.jar https://repo.jenkins-c
 USER jenkins
 ENV AGENT_WORKDIR=/home/jenkins/agent
 RUN mkdir -p ${AGENT_WORKDIR}
-RUN mkdir /home/jenkins/.jenkins
+RUN mkdir /home/jenkins/jenkins
 
-VOLUME /home/jenkins/.jenkins
+VOLUME /home/jenkins/jenkins
 VOLUME ${AGENT_WORKDIR}
 WORKDIR /home/jenkins
 
